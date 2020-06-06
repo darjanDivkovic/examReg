@@ -19,7 +19,7 @@ body {
 }
 
 /* Log in container */
-#login-container {
+#login-container, #register-container {
     border-top: 8px solid var(--blue);
     background-color: #fff;
     width: 300px;
@@ -27,11 +27,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 20px;
 }
 
-#login-container form {
-    display: block;
-    text-align: center;
+#login-container form, #register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-container form input, #register-container form input{
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.submit {
+    background-color: var(--blue);
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* End of Log in container */
