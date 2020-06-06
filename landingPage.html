@@ -26,18 +26,20 @@
       </div>
       <div id="register-container">
         <h2>Register</h2>
-        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" method="POST">
+        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" onsubmit="return tryRegister();" method="POST">
           <input type="text" name="name" placeholder="name" />
           <input type="text" name="surname" placeholder="surname" />
-          <input type="text" name="username" placeholder="username" />
-          <input type="password" name="password" placeholder="password" />
-          <input type="password" placeholder="confirm password" />
+          <input type="text" name="reg-username" placeholder="username" />
+          <input type="password" name="reg-password" placeholder="password" />
+          <input type="password" name="confirm-password" placeholder="confirm password" />
           <input type="email" name="email" placeholder="email" />
           <input type="submit" value="register" class="submit"/>
         </form>
+        <p id='registerErrorMsg'></p>
       </div>
     </div>
 
     <script src="script/login-validation.js"></script>
+    <script src="script/register-validation.js"></script>
   </body>
 </html>

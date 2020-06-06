@@ -1,4 +1,4 @@
-
+// Will fire on login submit
 function tryLogIn(){
     let username = document.querySelector('[name="username"]').value;
     let password = document.querySelector('[name="password"]').value;
