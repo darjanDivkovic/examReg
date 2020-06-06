@@ -16,12 +16,13 @@
     <div id="main-container">
       <div id="login-container">
         <h2>Log in</h2>
-        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" method="POST">
+        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" onsubmit="return tryLogIn();" method="POST">
           <input type="text" name="username" placeholder="username" />
           <input type="password" name="password" placeholder="password" />
           <br />
-          <input type="submit" value="Log-in" class="submit"/>
+          <input type="submit" value="Log in" class="submit"/>
         </form>
+        <p id='loginErrorMsg'></p>
       </div>
       <div id="register-container">
         <h2>Register</h2>
@@ -36,5 +37,7 @@
         </form>
       </div>
     </div>
+
+    <script src="script/login-validation.js"></script>
   </body>
 </html>
