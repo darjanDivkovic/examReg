@@ -1,3 +1,13 @@
+<?php
+
+    session_start();
+
+    if(!isset($_SESSION['server_msg'])){
+      $_SESSION['server_msg'] = '';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +21,7 @@
     <link rel="stylesheet" href="style/mainStyle.css" />
   </head>
   <body>
-    <h3>Landing page</h3>
+    <br />
     <br />
     <div id="main-container">
       <div id="login-container">
@@ -26,7 +36,7 @@
       </div>
       <div id="register-container">
         <h2>Register</h2>
-        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" onsubmit="return tryRegister();" method="POST">
+        <form action="./php/register.php" onsubmit="return tryRegister();" method="POST">
           <input type="text" name="name" placeholder="name" />
           <input type="text" name="surname" placeholder="surname" />
           <input type="text" name="reg-username" placeholder="username" />
@@ -35,7 +45,7 @@
           <input type="email" name="email" placeholder="email" />
           <input type="submit" value="register" class="submit"/>
         </form>
-        <p id='registerErrorMsg'></p>
+        <p id='registerErrorMsg'><?php echo $_SESSION['server_msg'];?></p>
       </div>
     </div>
 
