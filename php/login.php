@@ -1,14 +1,17 @@
 <?php
 
     require('./database/dbo.php');
-// resume session
+    // resume session
     session_start();
-// get data from post
+    // get data from post
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-// find username
+    // find username
     $user = $conn->query("SELECT * from users WHERE username = '$username'")->fetch();
+
+    // Closing the connection
+    $conn = null;
 
     if(!$user){
         $_SESSION['login-msg'] = 'User not found!';
