@@ -30,5 +30,6 @@
     header('Location: ../landingPage.php');
     }
 
-    
+    // Closing the connection
+    $conn = null;
 ?>

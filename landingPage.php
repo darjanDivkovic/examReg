@@ -5,6 +5,9 @@
     if(!isset($_SESSION['server_msg'])){
       $_SESSION['server_msg'] = '';
     }
+    if(!isset($_SESSION['login-msg'])){
+      $_SESSION['login-msg'] = '';
+    }
 
 ?>
 
@@ -26,13 +29,13 @@
     <div id="main-container">
       <div id="login-container">
         <h2>Log in</h2>
-        <form action="http://www.rebol.com/cgi-bin/test-cgi.cgi" onsubmit="return tryLogIn();" method="POST">
+        <form action="./php/login.php" onsubmit="return tryLogIn();" method="POST">
           <input type="text" name="username" placeholder="username" />
           <input type="password" name="password" placeholder="password" />
           <br />
           <input type="submit" value="Log in" class="submit"/>
         </form>
-        <p id='loginErrorMsg'></p>
+        <p id='loginErrorMsg'><?php echo $_SESSION['login-msg'];?></p>
       </div>
       <div id="register-container">
         <h2>Register</h2>
