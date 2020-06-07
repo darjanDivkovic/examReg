@@ -16,7 +16,7 @@
         echo "<tr>";
         echo "<td>" . $name . "</td>";
         echo "<td>
-              <button id=$eid onclick='registerMe(this.id);'>
+              <button id='$name' onclick='registerMe(this.id);'>
               Prijavi me
               </button>
               </td>";

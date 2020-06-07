@@ -7,7 +7,9 @@
     $exam = $_POST['exam'];
     $username = $_SESSION['username'];
 
-    $statement = $conn->prepare("INSERT INTO requests(eid,username) VALUES(?,?)");
+    // Potentialy add code to disallow user to register for an exam he already registered for..
+
+    $statement = $conn->prepare("INSERT INTO requests(exam,username) VALUES(?,?)");
     $statement->execute([$exam,$username]);
 
     echo 'You successfully registered for the exam!';
