@@ -35,8 +35,6 @@
     <a href='../../php/logout.php'>Log out</a>
     <p id=message></p>
     <br>
-    <button onclick="getRegisteredExams();">View exams you registered to</button>
-    <br>
     <br>
     <div id='registered-exams'>Registered exams will appear here!</div>
     <script src='exams.js'></script>

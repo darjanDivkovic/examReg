@@ -1,3 +1,4 @@
+getRegisteredExams();
 
 function getExams(year){
     if (year == "") {
