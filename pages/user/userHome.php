@@ -33,6 +33,7 @@
     <br>
     <br>
     <a href='../../php/logout.php'>Log out</a>
-    <script src='years.js'></script>
+    <p id=message></p>
+    <script src='exams.js'></script>
 </body>
 </html>
