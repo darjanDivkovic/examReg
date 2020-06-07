@@ -1,8 +1,8 @@
 <?php
 
-$host = 'db4free.net:3306';
-$db = 'daarjansdb';
-$user = 'daarjantz';
+$host = '127.0.0.1:3306';
+$db = 'exam_registration';
+$user = 'root';
 $pass = 'darjan1234';
 
 try {

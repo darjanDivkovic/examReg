@@ -28,6 +28,9 @@ function registerMe(exam){
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             let param = 'exam='+exam; 
             xmlhttp.send(param);
+    
+    // update registered exams from here also
+    getRegisteredExams();
 }
 
 function getRegisteredExams(){
