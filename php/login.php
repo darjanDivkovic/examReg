@@ -23,12 +23,12 @@
            // if all good, check account type and redirect to page accordingly
            if($user['admin'] == 0){
                // User homepage
-               header('Location: ../pages/userHome.html');
+               header('Location: ../pages/user/userHome.html');
            }
            else
            {
                // Admin homepage
-               header('Location: ../pages/adminHome.html');
+               header('Location: ../pages/admin/adminHome.html');
            }
         }
         else {
