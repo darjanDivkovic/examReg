@@ -30,13 +30,26 @@
     </form>
     <br>
     <div id='exams'>Exams will be displayed here</div>
-    <br>
-    <br>
-    <a href='../../php/logout.php'>Log out</a>
+    <br>    
     <p id=message></p>
     <br>
-    <br>
     <div id='registered-exams'>Registered exams will appear here!</div>
+    <br>
+    <br>
+    <div id='change-password-div'>
+      <form action='http://www.rebol.com/cgi-bin/test-cgi.cgi' method='POST' onsubmit='return verifyPasswordChange();'>
+        <input type='password' name='old-password' placeholder='Old Password'/>
+        <input type='password' name='new-password' placeholder='New Password'/>
+        <input type='password' name='retyped-new-password' placeholder='Retype new Password'/>
+        <input type='submit' value='change password'/>
+      </form>
+      <p id='password-change-error-msg'></p>
+    </div>
+
+    <br>
+    <a href='../../php/logout.php'>Log out</a>
+
     <script src='exams.js'></script>
+    <script src='passwordChange.js'></script>
 </body>
 </html>
