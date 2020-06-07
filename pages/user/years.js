@@ -14,3 +14,7 @@ function getExams(year){
         xmlhttp.send();
       }
 }
+
+function registerMe(exam){
+    console.log('Tried to register for: ' + exam);
+}

@@ -23,7 +23,8 @@
            // if all good, check account type and redirect to page accordingly
            if($user['admin'] == 0){
                // User homepage
-               header('Location: ../pages/user/userHome.html');
+               $_SESSION['username'] = $username;
+               header('Location: ../pages/user/userHome.php');
            }
            else
            {

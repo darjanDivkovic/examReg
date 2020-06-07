@@ -10,10 +10,18 @@
             <tr>
             <th>Exam</th>
           </tr>";
-    for ($i = 0 ; $i < count($exams) ; $i++){
+    foreach($exams as $exam){
+        $name = $exam["exam"];
+        $eid = $exam["eid"];
         echo "<tr>";
-        echo "<td>" . $exams[$i]["exam"] . "</td>";
+        echo "<td>" . $name . "</td>";
+        echo "<td>
+              <button id=$eid onclick='registerMe(this.id);'>
+              Prijavi me
+              </button>
+              </td>";
         echo "</tr>";
+
     }
     echo "</table>";
 ?>

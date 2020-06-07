@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,7 @@
 </head>
 <body>
     <h1>User homepage</h1>
+    <h3>Welcome <?php echo $_SESSION['username'] ?>!</h3>
     <br>
     <form>
         <select name='years' onchange="getExams(this.value);">
@@ -19,6 +26,9 @@
     </form>
     <br>
     <div id='exams'>Exams will be displayed here</div>
+    <br>
+    <br>
+    <a href='../../php/logout.php'>Log out</a>
     <script src='years.js'></script>
 </body>
 </html>
