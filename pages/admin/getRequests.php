@@ -10,22 +10,33 @@
             <th>Student</th>
             <th>Status</th>
             <th>Allow</th>
+            <th>Deny</th>
           </tr>";
     foreach($requests as $request){
+        $req_id = $request["rid"];
         $exam = $request["exam"];
         $student = $request["username"]; 
-        $status = '';
-        if($request["reviewed"] == 0){
+        $status = $request["reviewed"];
+        if($status == null){
             $status = 'Pending...';
         }
-        else $status = 'Accepted!';
+        if($status == 1){
+            $status = 'Allowed';
+        }
+        else $status = 'Denied';
+
         echo "<tr>";
         echo "<td>" . $exam . "</td>";
         echo "<td>" . $student . "</td>";
         echo "<td>" . $status . "</td>";
         echo "<td>
-              <button>
+              <button id=$req_id onclick='allowRequest(this.id);'>
               Allow
+              </button>
+              </td>";
+        echo "<td>
+              <button id=$req_id onclick='denyRequest(this.id);'>
+              Deny
               </button>
               </td>";
         echo "</tr>";

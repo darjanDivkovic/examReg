@@ -17,7 +17,7 @@
     foreach($exams as $exam){
         $name = $exam["exam"];
         $status = '';
-        if($exam["reviewed"] == 0){
+        if($exam["reviewed"] == null){
             $status = 'Pending...';
         }
         else $status = 'Accepted!';

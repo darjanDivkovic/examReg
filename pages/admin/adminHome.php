@@ -20,7 +20,7 @@
     <h3>Welcome <?php echo $_SESSION['username'] ?>!</h3>
     <h2>Requests</h2>
     <div id='requests'>Requests will be displayed here!</div>
-
+    <p id='req-msg'></p>
     <script src='requests.js'></script>
 </body>
 </html>
