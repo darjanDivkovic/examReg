@@ -20,7 +20,10 @@
         if($exam["reviewed"] == null){
             $status = 'Pending...';
         }
-        else $status = 'Accepted!';
+        if($exam["reviewed"] == 1){
+            $status = 'Accepted!';
+        }
+        else $status = 'Denied.';
         echo "<tr>";
         echo "<td>" . $name . "</td>";
         echo "<td>" . $status . "</td>";
