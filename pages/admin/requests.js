@@ -25,8 +25,9 @@ function allowRequest(rid){
        let param = 'rid='+rid; 
        xmlhttp.send(param);
 
-       // update
-       displayRequests();
+       // update with small timeout 
+       setTimeout(displayRequests,2000);
+       
 }
 
 
@@ -44,5 +45,5 @@ function denyRequest(rid){
        xmlhttp.send(param);
 
        // update
-       displayRequests();
+       setTimeout(displayRequests,2000);
 }
