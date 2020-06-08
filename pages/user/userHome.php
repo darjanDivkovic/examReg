@@ -56,6 +56,6 @@
     <a href='../../php/logout.php'>Log out</a>
 
     <script src='exams.js'></script>
-    <script src='passwordChange.js'></script>
+    <script src='./passwordChange.js'></script>
 </body>
 </html>

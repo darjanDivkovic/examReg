@@ -6,6 +6,10 @@
         header('Location: ../../landingPage.php');
     }
 
+    if(!isset($_SESSION['response'])){
+        $_SESSION['response'] = '';
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +25,19 @@
     <h2>Requests</h2>
     <div id='requests'>Requests will be displayed here!</div>
     <p id='req-msg'></p>
+   
+    <div id='change-password-div'>
+      <form action='../../php/changePassword.php' method='POST' onsubmit='return verifyPasswordChange();'>
+        <input type='password' name='old-password' placeholder='Old Password'/>
+        <input type='password' name='new-password' placeholder='New Password'/>
+        <input type='password' name='retyped-new-password' placeholder='Retype new Password'/>
+        <input type='submit' value='change password'/>
+      </form>
+      <p id='password-change-error-msg'>
+          <?php echo $_SESSION['response'];?>
+      </p>
+      <br>
+      <a href='../../php/logout.php'>Log out</a>
     <script src='requests.js'></script>
 </body>
 </html>
