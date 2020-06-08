@@ -29,7 +29,8 @@
            else
            {
                // Admin homepage
-               header('Location: ../pages/admin/adminHome.html');
+               $_SESSION['username'] = $username;
+               header('Location: ../pages/admin/adminHome.php');
            }
         }
         else {

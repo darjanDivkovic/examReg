@@ -1,0 +1,13 @@
+displayRequests();
+
+function displayRequests(){
+    console.log('Tried to view requests!');
+    var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("requests").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("GET","getRequests.php",true);
+        xmlhttp.send();
+}
