@@ -1,5 +1,6 @@
 :root {
-    --blue : #3597fa;
+    --blue: #0275d8;
+    --white: #d3dde7;
 }
 
 body {
@@ -10,8 +11,18 @@ body {
     background-size: cover;
 }
 
+::placeholder {
+    color: var(--white);
+    text-align: left;
+    padding-left: 10px;
+}
+
 #main-container {
-    width: 100%;
+    background-color: #fff;
+    width: 85%;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
     height: 80vh;
     display: flex;
     flex-direction: row;
@@ -21,15 +32,73 @@ body {
 
 /* Log in container */
 #login-container, #register-container {
-    border-top: 8px solid var(--blue);
-    background-color: #fff;
-    width: 300px;
-    height: 400px;
+    
+    color : #fff;
+    width: 95%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    justify-content: center;
+    margin: 30px 20px 30px 20px;
     text-align: center;
+}
+
+#register-container {
+    background: url('../res/img/registerExamsHome.svg') no-repeat;
+    background-size: cover;
+    font-size: 20px;
+}
+
+#register-container .first-msg {
+    margin-top: 40px;
+}
+
+#register-container hr {
+    margin-top: -10px;
+    width: 100px;
+    border: 2px solid white;
+}
+
+#register-container p {
+    font-size: 28px;
+}
+
+#register-container .msg {
+    font-size: 14px;
+    margin: 20px 70px;
+}
+
+#register-container .msg-b {
+    margin-top: 35px;
+    font-weight: bold;
+    font-size: 14px;
+}
+#register-container p span {
+    font-weight: bolder;
+}
+
+#register-container button {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+    background: none;
+    margin: 10px auto;
+    color: var(--blue);
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+#register-container button:hover {
+    transform: scale(1.2);
+    background-color: var(--blue);
+    color: white;
+}
+
+#register-container #registerErrorMsg {
+    font-size: 12px;
 }
 
 #login-container form, #register-container form {
@@ -38,15 +107,16 @@ body {
 }
 
 #login-container form input, #register-container form input{
-    height: 20px;
+    height: 25px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    background-color: #78b5eb;
 }
 
-.submit {
-    background-color: var(--blue);
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
+
 
 /* End of Log in container */
