@@ -48,7 +48,7 @@
       <p class='first-msg'>Already <span>have an account?</span></p>
       <hr>  
       <p class='msg'>Than you are set and ready to go, simply log in</p>
-      <p class='msg-b'>Enter your details</p>
+      <p class='msg-b'>Enter login details</p>
       <form id='form2' action="./php/login.php" onsubmit="return tryLogIn();" method="POST">
           <input type="text" name="username" placeholder="username" />
           <input type="password" name="password" placeholder="password" />

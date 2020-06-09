@@ -7,12 +7,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url('../res/img/registerExamsHome.svg') no-repeat;
+    background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
     background-size: cover;
 }
 
 ::placeholder {
-    color: #fff;
     text-align: left;
     padding-left: 10px;
 }
@@ -48,6 +47,10 @@ body {
     background: url('../res/img/registerExamsHome.svg') no-repeat;
     background-size: cover;
     
+}
+
+#register-container form input::placeholder {
+    color: white;
 }
 
 #register-container .first-msg {
@@ -100,6 +103,7 @@ body {
 
 /* End of Log in container */
 
+
 #login-container form, #register-container form {
     display: flex;
     flex-direction: column;
@@ -121,6 +125,10 @@ body {
     font-size: 28px;
 }
 
+#login-container form input::placeholder {
+    color: black;
+}
+
 #login-container .first-msg span {
     font-weight: bold;
 }
@@ -128,7 +136,7 @@ body {
 #login-container hr {
     margin-top: -10px;
     width: 100px;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 #login-container .msg {
@@ -138,7 +146,10 @@ body {
 
 #login-container form input {
     width: 350px;
-    background-color: #b4bac0;
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+    border-radius: 12px;
 }
 
 #login-container form {
@@ -155,9 +166,10 @@ body {
     width: 140px;
     height: 30px;
     border-radius: 10px;
-    border: 1px solid black;
-    background-color: #fff;
-    color: black;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: black;
+    color: #fff;
     margin: 10px auto;
     cursor: pointer;
     transition: 0.3s;
