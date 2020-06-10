@@ -8,7 +8,7 @@
 
     $exams = $conn->query("SELECT * from requests WHERE username = '$username'")->fetchAll(PDO::FETCH_ASSOC);
     
-    echo "<table>
+    echo "<table id='reg-exams-table'>
             <tr>
             <th>Exam</th>
             <th>Status</th>

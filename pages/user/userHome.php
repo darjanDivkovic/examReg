@@ -36,7 +36,8 @@
         <div id="search-bar"></div>
         <div id="exams-container">
             <div id='exams'>Exams will be displayed here</div>    
-            <p id=message></p>
+            <div id='exams-bottom'>
+            <p id='message'></p>
             <form>
                 <select name='years' onchange="getExams(this.value);">
                     <option value=''>Odaberite godinu</option>
@@ -46,11 +47,13 @@
                     <option value='4'>cetvrta godina</option>
                 </select>
             </form>
+            </div>
         </div>
         <div id="registered-exams-container">
         <div id='registered-exams'>Registered exams will appear here!</div>
         </div>
         <div id="change-password">
+        <h3>Change your password</h3>
             <form action='../../php/changePassword.php' method='POST' onsubmit='return verifyPasswordChange();'>
             <input type='password' name='old-password' placeholder='Old Password'/>
             <input type='password' name='new-password' placeholder='New Password'/>
