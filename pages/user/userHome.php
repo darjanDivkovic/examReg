@@ -33,7 +33,13 @@
             <h2>Welcome <?php echo $_SESSION['username'] ?>!</h2>
             <a href='../../php/logout.php'>Log out</a>
         </div>
-        <div id="search-bar"></div>
+        <div id="search-bar">
+            <div id='circles'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <div id="exams-container">
             <div id='exams'>Exams will be displayed here</div>    
             <div id='exams-bottom'>
