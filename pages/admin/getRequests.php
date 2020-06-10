@@ -17,13 +17,15 @@
         $exam = $request["exam"];
         $student = $request["username"]; 
         $status = $request["reviewed"];
-        if($status == null){
+        if($status == 0){
             $status = 'Pending...';
         }
         if($status == 1){
             $status = 'Allowed';
         }
-        else $status = 'Denied';
+        if($status == 2){
+            $status = 'Denied';
+        }
 
         echo "<tr>";
         echo "<td>" . $exam . "</td>";

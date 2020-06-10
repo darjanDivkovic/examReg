@@ -8,7 +8,6 @@
 
     $exams = $conn->query("SELECT * from requests WHERE username = '$username'")->fetchAll(PDO::FETCH_ASSOC);
     
-    
     echo "<table>
             <tr>
             <th>Exam</th>
@@ -17,13 +16,15 @@
     foreach($exams as $exam){
         $name = $exam["exam"];
         $status = '';
-        if($exam["reviewed"] == null){
+        if($exam["reviewed"] == 0){
             $status = 'Pending...';
         }
         if($exam["reviewed"] == 1){
             $status = 'Accepted!';
         }
-        else $status = 'Denied.';
+        if($exam["reviewed"] == 2){
+            $status = 'Denied.';
+        }
         echo "<tr>";
         echo "<td>" . $name . "</td>";
         echo "<td>" . $status . "</td>";

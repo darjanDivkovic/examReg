@@ -6,7 +6,7 @@
 
     $exams = $conn->query("SELECT * from exams WHERE year = '$year'")->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<table>
+    echo "<table id='exams-table'>
             <tr>
             <th>Exam</th>
           </tr>";
@@ -16,7 +16,7 @@
         echo "<tr>";
         echo "<td>" . $name . "</td>";
         echo "<td>
-              <button id='$name' onclick='registerMe(this.id);'>
+              <button id='$name' onclick='registerMe(this.id);' class='reg-exam-btn'>
               Prijavi me
               </button>
               </td>";
