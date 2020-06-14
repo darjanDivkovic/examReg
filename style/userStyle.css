@@ -26,7 +26,7 @@ body {
     display: grid;
     grid-template-areas: 
     'user search search search search search'
-    'user exams exams exams exams .'
+    'user exams exams exams exams picker'
     'user exams exams exams exams .'
     'user exams exams exams exams .'
     'user exams exams exams exams .'
@@ -41,7 +41,6 @@ body {
 
 #main-container div {
     background-color: #fff;
-    border-radius: 10px;
     overflow-x: hidden;
 }
 
@@ -51,6 +50,7 @@ body {
     background: url('../res/img/registerExamsHome.svg') no-repeat;
     background-size: cover;
     display: flex;
+    width: 320px;
     flex-direction: column;
     align-items: center;
     color: white;
@@ -120,12 +120,21 @@ body {
     overflow: hidden;
     overflow-y: auto;
     min-height: 240px;
+    min-width: 800px;
 }
 
-#exams-container form {
-    width: 50px;
-    margin-left: auto;
-    margin-right: 100px;
+#custom-select {
+    grid-area: picker;
+    width: 136px;
+    background: none;
+}
+
+#custom-select select {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--blue);
+    color: white;
+    border: 2px solid var(--blue);
+    outline: none;
 }
 
 #exams {

@@ -44,7 +44,9 @@
             <div id='exams'>Exams will be displayed here</div>    
             <div id='exams-bottom'>
             <p id='message'></p>
-            <form>
+            </div>
+        </div>
+        <div id='custom-select'>
                 <select name='years' onchange="getExams(this.value);">
                     <option value=''>Odaberite godinu</option>
                     <option value='1'>prva godina</option>
@@ -52,9 +54,7 @@
                     <option value='3'>treca godina</option>
                     <option value='4'>cetvrta godina</option>
                 </select>
-            </form>
             </div>
-        </div>
         <div id="registered-exams-container">
         <div id='registered-exams'>Registered exams will appear here!</div>
         </div>
