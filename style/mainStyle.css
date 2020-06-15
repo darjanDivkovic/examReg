@@ -9,6 +9,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 ::placeholder {
