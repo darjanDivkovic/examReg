@@ -89,7 +89,7 @@ body {
     border: 1px solid #fff;
     background-color: inherit;
     color: white;
-    margin: 10px auto;
+    margin: 0 auto;
     cursor: pointer;
     transition: 0.3s;
     outline: none;
@@ -186,3 +186,39 @@ body {
     font-size: 12px;
 }
 /* End of Log in container */
+
+/* Make it resposnive */
+
+@media only screen and (max-width: 1300px) {
+   #main-container {
+       flex-direction: column;
+       height: 90%;
+       margin-top: 0;
+   }
+   #register-container {
+    margin: 0;
+    padding-bottom: 40px;
+    height: 100%;
+    width: 100%;
+    background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
+    background-size: cover;
+
+   }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #e6e9ec; 
+    border: 1px solid #979899;
+    border-radius: 10px;
+  }
