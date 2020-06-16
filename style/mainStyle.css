@@ -1,224 +1,349 @@
 :root {
-    --blue: #0275d8;
-    --white: #d3dde7;
+    --black: #010101;
+    --grey: #858585;
+    --blue: #366ad9;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
-    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+#background {
+    border: 2px solid black;
+    background: url('../res/background.png') no-repeat;
+    background-size: cover; 
     background-position: center center;
-    background-attachment: fixed;
+    margin-top: -70px;
+    height: 560vh;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
 }
 
-::placeholder {
-    text-align: left;
-    padding-left: 10px;
-}
-
-#main-container {
-    background-color: #fff;
+#navbar {
     width: 85%;
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-left: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar img {
+    height: 30px;
+}
+
+#navbar-links {
     margin-left: auto;
-    margin-right: auto;
-    height: 80vh;
+    margin-right: 10px;
+    
+}
+
+#navbar-links a {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+#hero {
+    line-height: 0;
+    width: auto;
+    height: auto;
+    margin-top: 160px;
+    margin-left: 140px;
+}
+
+#hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#hero p {
+    margin-top: 70px;
+    font-size: 30px;
+    color: var(--grey);
+    font-weight: bold;
+}
+
+#hero p:nth-child(3){
+    margin-top: 200px;
+    font-size: 15px;
+}
+
+#hero button {
+    margin-top: 30px;
+    width: 300px;
+    height: 43.98px;
+    border-radius: 19px;
+    background: #366ad9;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+#hero button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero button:hover {
+    transform: scale(1.2);
+}
+
+#cards {
+    position: absolute;
+    top: 850px;
+}
+
+#cards-container {
+    width: auto;
+    margin-top: 420px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
-/* Log in container */
-#login-container, #register-container {
-    
-    width: 95%;
-    height: 95%;
+.card {
+    width: 357.19px;
+    height: 488.44px;
+    background: #fff;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.16);
+    margin-right: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 20px 30px 20px;
-    text-align: center;
-    font-size: 20px;
 }
 
-#register-container {
-    color: white;
-    background: url('../res/img/registerExamsHome.svg') no-repeat;
-    background-size: cover;
-    
-}
-
-#register-container form input::placeholder {
-    color: white;
-}
-
-#register-container .first-msg {
-    margin-top: 80px;
-    font-size: 28px;
-}
-
-#register-container hr {
-    margin-top: -10px;
-    width: 100px;
-    border: 1px solid white;
-}
-
-
-#register-container .msg {
-    font-size: 14px;
-    margin: 20px 70px;
-}
-
-#register-container .msg-b {
-    margin-top: 35px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-#register-container p span {
-    font-weight: bolder;
-}
-
-#register-container button {
-    width: 140px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    background-color: inherit;
-    color: white;
-    margin: 0 auto;
-    cursor: pointer;
-    transition: 0.3s;
-    outline: none;
-}
-
-#register-container button:hover {
-    transform: scale(1.2);
-}
-
-#register-container #registerErrorMsg {
-    font-size: 12px;
-}
-
-/* End of Log in container */
-
-
-#login-container form, #register-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-#login-container form input, #register-container form input{
-    height: 25px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    color: #fff;
-    padding-left: 5px;
-    border: none;
-    outline: none;
-    background-color: #78b5eb;
-}
-
-#login-container .first-msg {
-    margin-top: 80px;
-    font-size: 28px;
-}
-
-#login-container form input::placeholder {
-    color: black;
-}
-
-#login-container .first-msg span {
-    font-weight: bold;
-}
-
-#login-container hr {
-    margin-top: -10px;
-    width: 100px;
-    border: 2px solid black;
-}
-
-#login-container .msg {
-    font-size: 14px;
-    margin: 20px 70px;
-}
-
-#login-container form input {
-    width: 350px;
-    background-color: white;
-    border: 3px solid black;
-    color: black;
-    border-radius: 12px;
-}
-
-#login-container form {
-    margin-top: 5px;
-}
-
-#login-container .msg-b {
-    margin-top: 50px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-#login-container form button {
-    width: 140px;
-    height: 30px;
-    border-radius: 10px;
-    font-weight: bold;
-    border: 3px solid black;
-    background-color: black;
-    color: #fff;
-    margin: 10px auto;
-    cursor: pointer;
-    transition: 0.3s;
-    outline: none;
-}
-
-#login-container form button:hover {
-    transform: scale(1.2);
-}
-
-#login-container #loginErrorMsg{
-    font-size: 12px;
-}
-/* End of Log in container */
-
-/* Make it resposnive */
-
-@media only screen and (max-width: 1300px) {
-   #main-container {
-       flex-direction: column;
-       height: 90%;
-       margin-top: 0;
-   }
-   #register-container {
-    margin: 0;
-    padding-bottom: 40px;
-    height: 100%;
+.card-ribbon {
     width: 100%;
-    background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
-    background-size: cover;
+    height: 24.45px;
+    background: linear-gradient(#4b4ea9 0%, #405dc2 41.84%, #3769d7 100%);
 
-   }
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: #e6e9ec; 
-    border: 1px solid #979899;
-    border-radius: 10px;
-  }
+.card img {
+    height: 150px;
+    width: 150px;
+    margin-top: 40px;
+}
+
+.card h1 {
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.card p {
+    color : var(--grey);
+    margin: 20px 25px;
+}
+
+#reg-header {
+    margin-top: 320px;
+    margin-left: 490px;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#reg-sub-header {
+    color: var(--grey);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -35px;
+    margin-left: 790px;
+}
+
+#reg-container {
+    margin-top: 70px;
+    margin-left: 380px;
+    width: 997.28px;
+    height: 420px;
+    background: #fff;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.16);
+}
+
+
+#reg-container p {
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--black)
+}
+
+#form1 {
+    margin-top: 60px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#form1 div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+#form1 input, #form2 input {
+    width: 300px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 3px solid var(--grey);
+    outline: none;
+    transition: 0.3s;
+}
+
+#form1 input:focus, #form2 input:focus {
+    transform: scale(1.1);
+    border-bottom: 3px solid var(--blue);
+}
+
+#reg-container button, #login-container button{
+    width: 234.47px;
+    height: 36.81px;
+    border-radius: 19px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #366ad9;
+    box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.26);
+    margin-top: 0px;
+    margin-left: 720px;
+    transition: 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+#reg-container button:hover, #login-container button:hover {
+    transform: scale(1.2);
+}
+
+#reg-subcontainer {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 850px;
+    align-items: center;
+}
+
+
+
+
+#reg-subcontainer p {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#reg-subcontainer button, #login-subcontainer button {
+    width: 150px;
+    height: 30px;
+    color: var(--blue);
+    font-weight: bold;
+    margin-left: 30px;
+    background-color: inherit;
+    border-radius: 16px;
+    border: 4px solid var(--blue);
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+#reg-subcontainer button:hover, #login-subcontainer button:hover {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+#member-login-header {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--black);
+    margin-top: 380px;
+    margin-left: 570px;
+}
+
+#login-container {
+    width: 482.83px;
+    height: 562.91px;
+    background: #fff;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.16);
+    margin: -20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-container img {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+}
+
+#form2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#login-container button {
+    margin: 0;
+    margin-top: 40px;
+}
+
+#login-subcontainer {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 30px;
+    margin-left: 780px;
+    align-items: center;
+}
+
+#login-subcontainer p {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#go-up {
+    height: 240px;
+    width: 300px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid #fff;
+    border-right: 50px solid #fff;
+    border-bottom: 100px solid #010101;
+}
+
+#go-up p {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
