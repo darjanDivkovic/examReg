@@ -26,7 +26,7 @@
             $status = 'Denied.';
         }
         echo "<tr>";
-        echo "<td>" . $name . "</td>";
+        echo "<td class='exam-name-row'>" . $name . "</td>";
         echo "<td>" . $status . "</td>";
         echo "</tr>";
 

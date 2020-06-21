@@ -46,14 +46,15 @@
         <p id='message'></p>
     </div>
    
-      
-        
         <div id="exams-container">
             <div id='exams'></div>    
             </div>
         
         <div id="registered-exams-container">
-        <div id='registered-exams'>Registered exams will appear here!</div>
+        <div class='card-ribbon'></div>
+        <h1>Exams your registered for</h1>
+        <div id='registered-exams'>
+        </div>
         </div>
         <div id="change-password">
         <h3>Change your password</h3>
