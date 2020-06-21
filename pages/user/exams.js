@@ -1,6 +1,7 @@
 getRegisteredExams();
 
 function getExams(year){
+  console.log(year);
     if (year == "") {
         document.getElementById("exams").innerHTML = "still picking";
         return;

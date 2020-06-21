@@ -25,27 +25,14 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <div id="main-container">
-        <div id="user-container">
-            <h1>User homepage</h1>
-            <img src='../../res/img/user-icon.png' alt=''/>
-            <h2>Welcome <?php echo $_SESSION['username'] ?>!</h2>
-            <a href='../../php/logout.php'>Log out</a>
+    <div id='navbar'>
+        <img src='../../res/logo.png' alt="a">
+        <div>
+        <h4><?php echo $_SESSION['username'] ?></h4>
+        <a href='../../php/logout.php'>Log out</a>
         </div>
-        <div id="search-bar">
-            <div id='circles'>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div id="exams-container">
-            <div id='exams'>Exams will be displayed here</div>    
-            <div id='exams-bottom'>
-            <p id='message'></p>
-            </div>
-        </div>
+    </div>
+    <div id='year-picker-container'>
         <div id='custom-select'>
                 <select name='years' onchange="getExams(this.value);">
                     <option value=''>Odaberite godinu</option>
@@ -54,7 +41,17 @@
                     <option value='3'>treca godina</option>
                     <option value='4'>cetvrta godina</option>
                 </select>
+        </div>
+        <h5>Pick the desired year to view available exams.</h5>
+        <p id='message'></p>
+    </div>
+   
+      
+        
+        <div id="exams-container">
+            <div id='exams'></div>    
             </div>
+        
         <div id="registered-exams-container">
         <div id='registered-exams'>Registered exams will appear here!</div>
         </div>
@@ -70,10 +67,10 @@
               <?php echo $_SESSION['response'];?>
           </p>
         </div>      
-    </div>
         
     
     <script src='exams.js'></script>
     <script src='../shared/passwordChange.js'></script>
+    
 </body>
 </html>
