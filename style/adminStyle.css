@@ -1,0 +1,34 @@
+:root {
+    --blue: #366ad9;
+    --black: #010101;
+    --grey: #858585;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../res/img/registerExamsHomeBacground.svg') no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.all-den-btn {
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    color: var(--blue);
+    transition: 0.3s;
+    outline: none;
+    cursor: pointer;
+}
+
+.all-den-btn:hover {
+    background-color: var(--blue);
+    color: #fff;
+    transform: scale(1.2);
+}

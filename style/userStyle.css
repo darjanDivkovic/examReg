@@ -199,10 +199,11 @@ body {
 }
 
 #reg-exams-table td {
-    border-bottom: 1px solid var(--grey);
+    border: 1px solid var(--grey);
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 20px;
+    color: var(--black);
+    font-size: 16px;
 }
 
 .exam-name-row {

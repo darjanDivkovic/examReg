@@ -4,7 +4,7 @@
 
     $requests = $conn->query("SELECT * from requests")->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<table>
+    echo "<table id='reg-exams-table'>
             <tr>
             <th>Exam</th>
             <th>Student</th>
@@ -29,15 +29,15 @@
 
         echo "<tr>";
         echo "<td>" . $exam . "</td>";
-        echo "<td>" . $student . "</td>";
-        echo "<td>" . $status . "</td>";
-        echo "<td>
-              <button id=$req_id onclick='allowRequest(this.id);'>
+        echo "<td align='center'>" . $student . "</td>";
+        echo "<td align='center'>" . $status . "</td>";
+        echo "<td align='center'> 
+              <button id=$req_id onclick='allowRequest(this.id);' class='all-den-btn'>
               Allow
               </button>
               </td>";
-        echo "<td>
-              <button id=$req_id onclick='denyRequest(this.id);'>
+        echo "<td align='center'>
+              <button id=$req_id onclick='denyRequest(this.id);' class='all-den-btn'>
               Deny
               </button>
               </td>";
