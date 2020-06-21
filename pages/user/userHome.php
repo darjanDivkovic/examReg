@@ -29,6 +29,7 @@
         <img src='../../res/logo.png' alt="a">
         <div>
         <h4><?php echo $_SESSION['username'] ?></h4>
+        <button id='change-pw-btn'>Change password</button>
         <a href='../../php/logout.php'>Log out</a>
         </div>
     </div>
@@ -60,20 +61,21 @@
         <div class='card-ribbon'>.</div>
         <button id=close-btn>X</button>
         <h3>Change your password</h3>
+        <p id='password-change-error-msg'>
+        <?php echo $_SESSION['response'];?>
+          </p>
             <form action='../../php/changePassword.php' method='POST' onsubmit='return verifyPasswordChange();'>
             <input type='password' name='old-password' placeholder='Old Password'/>
             <input type='password' name='new-password' placeholder='New Password'/>
             <input type='password' name='retyped-new-password' placeholder='Retype new Password'/>
             <input type='submit' value='change password'/>
           </form>
-          <p id='password-change-error-msg'>
-              <?php echo $_SESSION['response'];?>
-          </p>
+              
         </div>      
         
     
     <script src='exams.js'></script>
     <script src='../shared/passwordChange.js'></script>
-    
+    <script src='button-script.js'></script>
 </body>
 </html>
