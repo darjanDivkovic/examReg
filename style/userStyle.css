@@ -4,6 +4,10 @@
     --grey: #858585;
 }
 
+::placeholder {
+    text-align: center;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -204,6 +208,67 @@ body {
 .exam-name-row {
     text-align: left;
     padding-left: 20px;
+}
+
+#change-password {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.16); 
+}
+
+#change-password h3 {
+    margin-top: 20px;
+} 
+
+#close-btn {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 12px;
+    outline: none;
+    background-color: var(--grey);
+    cursor: pointer;
+}
+#change-password form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+#change-password form input {
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--grey);
+}
+
+#change-password form input[type=submit]{
+    padding: 15px 40px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+#change-password form input[type=submit]:hover {
+    transform: scale(1.2);
 }
 /* width */
 ::-webkit-scrollbar {

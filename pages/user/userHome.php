@@ -57,6 +57,8 @@
         </div>
         </div>
         <div id="change-password">
+        <div class='card-ribbon'>.</div>
+        <button id=close-btn>X</button>
         <h3>Change your password</h3>
             <form action='../../php/changePassword.php' method='POST' onsubmit='return verifyPasswordChange();'>
             <input type='password' name='old-password' placeholder='Old Password'/>
