@@ -30,6 +30,12 @@
         <a href='../../php/logout.php'>Log out</a>
         </div>
     </div>
+    <div id='search-container'>
+            <img src="../../res/search.png" alt="a">
+            <input type="text" id='filter' onkeyup="filterRegistered()" placeholder="search registered exams...">
+            <h3>status</h3>
+            <input type="checkbox" id="status-checkbox" name="exams" value="exams">
+        </div>
     <div id='requests'>Requests will be displayed here!</div>
     <p id='req-msg'></p>
    
@@ -51,5 +57,7 @@
 
     <script src='requests.js'></script>
     <script src='../shared/button-script.js'></script>
+    <script src='../shared/passwordChange.js'></script>
+    <script src='../shared/filter.js'></script>
 </body>
 </html>

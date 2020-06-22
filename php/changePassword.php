@@ -31,6 +31,6 @@
         // Set that success msg
         $_SESSION['response'] = 'Password change successful!';
         // Go back
-        header('Location: ../pages/user/userHome.php');
+        header('Location: ../landingPage.php');
     }
 ?>

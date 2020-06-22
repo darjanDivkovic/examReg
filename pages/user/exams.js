@@ -3,7 +3,7 @@ getRegisteredExams();
 function getExams(year){
   console.log(year);
     if (year == "") {
-        document.getElementById("exams").innerHTML = "still picking";
+        document.getElementById("exams").innerHTML = "";
         return;
       } else {
         var xmlhttp = new XMLHttpRequest();
