@@ -54,6 +54,12 @@
         <div id="registered-exams-container">
         <div class='card-ribbon'></div>
         <h1>Exams your registered for</h1>
+        <div id='search-container'>
+            <img src="../../res/search.png" alt="a">
+            <input type="text" id='filter' onkeyup="filterRegistered()" placeholder="search registered exams...">
+            <h3>exams</h3>
+            <input type="checkbox" id="status-checkbox" name="exams" value="exams">
+        </div>
         <div id='registered-exams'>
         </div>
         </div>
@@ -76,6 +82,7 @@
     
     <script src='exams.js'></script>
     <script src='../shared/passwordChange.js'></script>
-    <script src='button-script.js'></script>
+    <script src='../shared/button-script.js'></script>
+    <script src='../shared/filter.js'></script>
 </body>
 </html>
