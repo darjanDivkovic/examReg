@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/userStyle.css">
     <link rel="stylesheet" href="../../style/adminStyle.css">
-    <title>EER Admin</title>
+    <title>EER - Admin</title>
 </head>
 <body>
 <div id='navbar'>

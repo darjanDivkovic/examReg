@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../style/userStyle.css">
-    <title>Document</title>
+    <title>EER - User</title>
 </head>
 <body>
     <div id='navbar'>
