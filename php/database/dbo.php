@@ -1,9 +1,9 @@
 <?php
 
-$host = '127.0.0.1:3306';
-$db = 'exam_registration';
-$user = 'root';
-$pass = 'darjan1234';
+$host = 'sql7.freemysqlhosting.net';
+$db = 'sql7350067';
+$user = 'sql7350067';
+$pass = 'NQ6fdhwLeZ';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
